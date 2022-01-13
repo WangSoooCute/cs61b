@@ -31,3 +31,13 @@ public class LeapYear {
     }
 }
 
+/**
+A leap year is either:
+    divisible by 400 or
+    or divisible by 4 and not by 100.
+
+Your code must declare a method as follows:
+    public static boolean isLeapYear(int year)
+This method will be tested by the Gradescope autograder.
+
+*/

@@ -3,6 +3,16 @@
  */
 public class LeapYear {
 
+    private static boolean isLeapYear(int year){
+        if(year%400==0){
+            return true;
+        }
+        if(year%4==0 && year%100!=0){
+            return true;
+        }
+        return false;
+    }
+
     /** Calls isLeapYear to print correct statement.
      *  @param  year to be analyzed
      */
@@ -18,8 +28,9 @@ public class LeapYear {
     public static void main(String[] args) {
         if (args.length < 1) {
             System.out.println("Please enter command line arguments.");
-            System.out.println("e.g. java Year 2000");
+            System.out.println("e.g. java LeapYear 2000");
         }
+        System.out.println(args[0]);
         for (int i = 0; i < args.length; i++) {
             try {
                 int year = Integer.parseInt(args[i]);
@@ -35,9 +46,4 @@ public class LeapYear {
 A leap year is either:
     divisible by 400 or
     or divisible by 4 and not by 100.
-
-Your code must declare a method as follows:
-    public static boolean isLeapYear(int year)
-This method will be tested by the Gradescope autograder.
-
 */
